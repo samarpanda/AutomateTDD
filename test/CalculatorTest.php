@@ -25,6 +25,22 @@ class CalculatorTest extends PHPUnit_Framework_TestCase
 		];
 	}
 
+	public function multiplyInputNumbers()
+	{
+		return [
+			[2, 2, 4],
+			[3, 3, 9]
+		];
+	}
+
+	public function divideInputNumbers()
+	{
+		return [
+			[2, 2, 1],
+			[6, 3, 2]
+		];
+	}
+
 	/**
 	* @dataProvider addInputNumbers
 	*/
@@ -39,5 +55,20 @@ class CalculatorTest extends PHPUnit_Framework_TestCase
 	public function testSubstract($a, $b, $result)
 	{
 		$this->assertEquals($result, $this->calc->substract($a, $b));
+	}
+
+	/**
+	* @dataProvider multiplyInputNumbers
+	*/
+	public function testMultiply($a, $b, $result){
+		$this->assertEquals($result, $this->calc->multiply($a, $b));
+	}
+
+	/**
+	* @dataProvider divideInputNumbers
+	*/
+	public function testDivide($a, $b, $result)
+	{
+		$this->assertEquals($result, $this->calc->divide($a, $b));
 	}
 }
