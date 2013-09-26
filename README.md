@@ -15,13 +15,13 @@ AutomateTDD
 
 1. Open terminal 
 
-```bash
+  ```bash
 
-// Go to automatetdd directory and run below command
-watchr autotest_watchr.rb
+  // Go to automatetdd directory and run below command
+  watchr autotest_watchr.rb
 
-```
-2. Go ahead and try changing `app` or `test` directory files. All test files will gate executed on any files changes in these directories.
+  ```
+2. Go ahead and try changing `app` or `test` directory files. All test files will get executed on any change in these directories/files.
 
 
 ## TODO
